@@ -108,7 +108,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<script>
 		document.getElementById('loadImageBtn').addEventListener('click', function()
 		let img = new Image();
-		img.src = 
+		img.src = 'cellular-microscopic-dna.jpg';
+		img.onload = function()
+		ctx.drawImage(img, 250, 50, 150, 150);
 	</script>
 	
 
