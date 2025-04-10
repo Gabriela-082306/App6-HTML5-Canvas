@@ -69,59 +69,63 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<canvas id="myCanvas"></canvas>
 
 	<!--Buttons for different actions-->
+	<div>
 	<button id="drawRectBtn">Draw Rectangle</button>
 	<button id="drawNameBtn">Draw Name</button>
 	<button id="loadImageBtn">Load Image</button>
 	<button id="clearCanvasBtn">Clear Canvas</button>
+	</div>
 
 
-	<script src="app.js"></script>
-</body>
-</html>
+	
+
 
 	<script>
 	// Get the canvas and the context to draw on the canvas.
 		const canvas = document.getElementById('myCanvas');
 		const ctx = canvas.getContext('2d');
-	</script>
+	
 
-<script>
+
 	// Set canvas size to fit the screen width
 	canvas.width = window.innerWidth;
 	canvas.height = 300;
-</script>
 
 
-	<script>
+
+	
 		document.getElementById('drawRectBtn').addEventListener('click', function() 
 		ctx.fillStyle = 'blue';
 		ctx.fillRect(50, 50, 200, 100);
-	</script>
+	
 
-<script>
+
 	document.getElementById('drawNameBtn').addEventListener('click', function()
 	ctx.font = '30px Arial';
 	ctx.fillStyle = 'black';
 	ctx.fillText('Your Name', 100, 200); 
-</script>
 
-	<script>
+
+	
 		document.getElementById('loadImageBtn').addEventListener('click', function()
 		let img = new Image();
 		img.src = 'cellular-microscopic-dna.jpg';
 		img.onload = function()
 		ctx.drawImage(img, 250, 50, 150, 150);
-	</script>
+	
 
-<script>
+
 	document.getElementById('clearCanvasBtn').addEventListener('click',function()
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-</script>
 
-	<script>
+
+
 		var docMod = document.lastMoodified;
 		alert("This file last modified " + docMod);
 		console.log("This file last modified " + docMod);
 	</script>
+</body>
+	</html>
+
 	
 
