@@ -94,30 +94,31 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 
 	
-		document.getElementById('drawRectBtn').addEventListener('click', function() 
+		document.getElementById('drawRectBtn').addEventListener('click', function() {
 		ctx.fillStyle = 'blue';
 		ctx.fillRect(50, 50, 200, 100);
-	
+	      	});
 
 
-	document.getElementById('drawNameBtn').addEventListener('click', function()
+	document.getElementById('drawNameBtn').addEventListener('click', function() {
 	ctx.font = '30px Arial';
 	ctx.fillStyle = 'black';
 	ctx.fillText('Your Name', 100, 200); 
-
+		});	
 
 	
-		document.getElementById('loadImageBtn').addEventListener('click', function()
+	document.getElementById('loadImageBtn').addEventListener('click', function() {
 		let img = new Image();
 		img.src = 'cellular-microscopic-dna.jpg';
 		img.onload = function()
-		ctx.drawImage(img, 250, 50, 150, 150);
-	
+			ctx.drawImage(img, 250, 50, 150, 150);
+			};
+		});
 
 
-	document.getElementById('clearCanvasBtn').addEventListener('click',function()
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+	document.getElementById('clearCanvasBtn').addEventListener('click',function() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	});
 
 
 		var docMod = document.lastMoodified;
