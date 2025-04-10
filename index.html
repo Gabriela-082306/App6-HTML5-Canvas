@@ -112,5 +112,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		img.onload = function()
 		ctx.drawImage(img, 250, 50, 150, 150);
 	</script>
+
+<script>
+	document.getElementById('clearCanvasBtn').addEventListener('click',function()
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+</script>
 	
 
