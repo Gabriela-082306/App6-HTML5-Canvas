@@ -93,34 +93,34 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 
 
-	
+		// Drawing the Rectangle on the canvas
 		document.getElementById('drawRectBtn').addEventListener('click', function() {
-		ctx.fillStyle = 'blue';
-		ctx.fillRect(50, 50, 200, 100);
+		ctx.fillStyle = 'blue'; // Color of the rectangle
+		ctx.fillRect(50, 50, 200, 100); // Dimensions of the rectangle
 	      	});
 
-
+	// Drawing my name on the canvas
 	document.getElementById('drawNameBtn').addEventListener('click', function() {
-	ctx.font = '30px Arial';
-	ctx.fillStyle = 'black';
-	ctx.fillText('Gabby Garcia', 100, 200); 
+	ctx.font = '30px Arial'; // Font and Font size
+	ctx.fillStyle = 'black'; // Giving color to the font
+	ctx.fillText('Gabby Garcia', 100, 200); // Putting my name on the website
 		});	
 
-	
+	// Getting the image to show up on the canvas
 	document.getElementById('loadImageBtn').addEventListener('click', function() {
 		let img = new Image();
-		img.src = 'cellular-microscopic-dna.jpg';
+		img.src = 'cellular-microscopic-dna.jpg'; // The picture I'm using
 		img.onload = function() {
 			ctx.drawImage(img, 250, 50, 150, 150);
 			};
 		});
 
-
+	// Button that allows the canvas to be cleared
 	document.getElementById('clearCanvasBtn').addEventListener('click',function() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 	});
 
-
+		// Gives an update of when the document was last updated
 		var docMod = document.lastModified;
 		alert("This file last modified " + docMod);
 		console.log("This file last modified " + docMod);
